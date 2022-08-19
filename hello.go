@@ -3,13 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	a := 10
+	variavel := 10
+	abc(&variavel)
 
-	var ponteiro *int = &a
+	fmt.Println(variavel)
 
-	*ponteiro = 50
+}
 
-	b := &a
-	*b = 60
-	fmt.Println(a)
+func abc(a *int) {
+	*a = 200
 }
