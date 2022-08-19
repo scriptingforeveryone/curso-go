@@ -16,7 +16,7 @@ func main() {
 		Name: "Ka",
 	}
 	carro.andou()
-	// fmt.Println(carro.Name)
+	fmt.Println(carro.Name)
 
 }
 
