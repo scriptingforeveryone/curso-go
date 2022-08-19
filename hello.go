@@ -4,5 +4,7 @@ import "fmt"
 
 func main() {
 	a := 10
-	fmt.Println(&a)
+
+	var ponteiro *int = &a
+	fmt.Println(*ponteiro)
 }
