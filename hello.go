@@ -1,19 +1,27 @@
 package main
 
-import (
-	"errors"
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	res, _ := soma(7, 2)
-	fmt.Println(res)
+
+	resultado := somaTudo(10, 20, 40)
+
+	fmt.Println(resultado)
+
 }
 
-func soma(x int, y int) (int, error) {
-	res := x + y
-	if res > 10 {
-		return 0, errors.New("Total maior que 10")
+func soma(a int, b int) (result int) {
+
+	result = a + b
+	return
+
+}
+
+func somaTudo(x ...int) int {
+	resultado := 0
+
+	for _, v := range x {
+		resultado += v
 	}
-	return res, nil
+	return resultado
 }
