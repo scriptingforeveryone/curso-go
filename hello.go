@@ -2,7 +2,21 @@ package main
 
 import "fmt"
 
+type Carro struct {
+	Nome string
+}
+
+func (c Carro) andar() {
+	fmt.Println(c.Nome, "andou")
+}
+
 func main() {
+
+	carro := Carro{
+		Nome: "BMW",
+	}
+
+	carro.andar()
 
 	resultado := func(x ...int) func() int {
 		res := 0
