@@ -4,24 +4,20 @@ import "fmt"
 
 func main() {
 
-	resultado := somaTudo(10, 20, 40)
+	resultado := func(x ...int) func() int {
+		res := 0
 
-	fmt.Println(resultado)
+		for _, v := range x {
+			res += v
+		}
 
-}
+		return func() int {
+			return res * res
+		}
 
-func soma(a int, b int) (result int) {
-
-	result = a + b
-	return
-
-}
-
-func somaTudo(x ...int) int {
-	resultado := 0
-
-	for _, v := range x {
-		resultado += v
 	}
-	return resultado
+	// resultado := somaTudo(10, 20, 40)
+
+	fmt.Println(resultado(54, 54, 54, 54)())
+
 }
