@@ -8,5 +8,5 @@ func main() {
 	var ponteiro *int = &a
 
 	*ponteiro = 50
-	fmt.Println(*ponteiro)
+	fmt.Println(a)
 }
