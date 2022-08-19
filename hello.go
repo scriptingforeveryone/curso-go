@@ -10,5 +10,6 @@ func main() {
 	*ponteiro = 50
 
 	b := &a
-	fmt.Println(*b)
+	*b = 60
+	fmt.Println(*ponteiro)
 }
