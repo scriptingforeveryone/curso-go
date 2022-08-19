@@ -6,7 +6,7 @@ type Carro struct {
 	Name string
 }
 
-func (c Carro) andou() {
+func (c *Carro) andou() {
 	c.Name = "BMW"
 	fmt.Println(c.Name, "andou")
 }
